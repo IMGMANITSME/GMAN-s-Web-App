@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todoapp</title>
+
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>GMAN's ToDo App</h1>
+        <form id="newtaskform">
+            <input type="text" id="inputnewtask" placeholder="Input your New Task" />
+            <input type="submit" id="addnewtask" value="add task">
+        </form>
+    </header>
+
+    <main>
+        <section class="tasklist">
+            <h2>TASKS</h2>
+
+            <div id="tasks">
+                <div class="task">
+                    <div class="content">
+                        <input type="text" class="text" value="holy shit" readonly />
+                    </div>
+                    <div class="actions">
+                        <button class="edit">edit</button>
+                        <button class="delete">delete</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

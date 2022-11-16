@@ -1,0 +1,127 @@
+:root {
+    --dark: #374151;
+    --darker: #1F2937;
+    --darkest: #111827;
+    --gray: #6B7280;
+    --light: #EEE;
+    --pink: #EC4899;
+    --purple: #8B5CF6;
+    --white: #FFF;
+}
+
+* {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--dark);
+    color: var(--light);
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: lightseagreen;
+    margin-bottom: 1rem;
+}
+
+#newtaskform {
+    display: flex;
+}
+
+input,
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#inputnewtask {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.2rem;
+}
+
+#inputnewtask::placeholder {
+    color: var(--gray);
+}
+
+#addnewtask {
+    color: #00BFFF;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--purple), var(--pink));
+    border-radius: 1rem;
+    /*
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    */
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#addnewtask:hover {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+}
+
+#addnewtask:active {
+    transform: scale(0.9);
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.tasklist {
+    padding: 1rem;
+}
+
+.tasklist h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgb(153, 44, 248);
+    margin-bottom: 1rem;
+}
+
+#tasks .task {
+    display: flex;
+    justify-items: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+#tasks .task .content .text {
+    color: var(--light);
+    font-size: 1.2rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only) {
+    color: var(--gray);
+}
