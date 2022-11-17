@@ -90,7 +90,6 @@ main {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
-    padding: 2rem 1rem;
 }
 
 .tasklist {
@@ -99,20 +98,23 @@ main {
 
 .tasklist h2 {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 300;
     color: rgb(153, 44, 248);
     margin-bottom: 1rem;
 }
 
 #tasks .task {
     display: flex;
-    justify-items: space-between;
+    justify-content: space-between;
     background-color: var(--darkest);
     padding: 1rem;
     border-radius: 1rem;
     margin-bottom: 1rem;
 }
 
+#tasks .task .content {
+    flex: 1 1 0%;
+}
 
 #tasks .task .content .text {
     color: var(--light);
@@ -124,4 +126,50 @@ main {
 
 #tasks .task .content .text:not(:read-only) {
     color: var(--gray);
+}
+
+#tasks .task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 1rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.task .actions button:hover {
+    opacity: 0.8;
+}
+
+.task .actions button:active {
+    opacity: 0.6;
+}
+
+.task .actions .edit {
+    color: #331483;
+    background-image: linear-gradient(to right, var(--purple), var(--pink));
+    border-radius: 0.5rem;
+    /*
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    */
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.task .actions .delete {
+    color: rgb(193, 10, 10);
+    background-image: linear-gradient(to right, var(--purple), var(--pink));
+    border-radius: 0.5rem;
+    /*
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    */
+    cursor: pointer;
+    transition: 0.4s;
 }
